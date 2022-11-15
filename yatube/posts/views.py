@@ -32,3 +32,11 @@ def group_posts(request, slug):
         'posts': posts,
     }
     return render(request, 'posts/group_list.html', context)
+
+def group_list(request):
+    template='posts/group_list.html'
+    title='Лев Толстой - зеркало русской революции.'
+    context= {
+        'title' : title,
+    }
+    return render(request, template, context)
